@@ -329,6 +329,7 @@ export async function runEmbeddedPiAgent(
             model,
             authStorage,
             modelRegistry,
+            providerApiKey: apiKeyInfo?.apiKey,
             thinkLevel,
             verboseLevel: params.verboseLevel,
             reasoningLevel: params.reasoningLevel,

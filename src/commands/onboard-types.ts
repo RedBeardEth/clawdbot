@@ -31,6 +31,7 @@ export type AuthChoice =
   | "github-copilot"
   | "copilot-proxy"
   | "qwen-portal"
+  | "x402"
   | "skip";
 export type GatewayAuthChoice = "off" | "token" | "password";
 export type ResetScope = "config" | "config+creds+sessions" | "full";

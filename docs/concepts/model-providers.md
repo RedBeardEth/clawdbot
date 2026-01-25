@@ -124,6 +124,36 @@ Clawdbot ships with the pi‑ai catalog. These providers require **no**
 Use `models.providers` (or `models.json`) to add **custom** providers or
 OpenAI/Anthropic‑compatible proxies.
 
+### x402
+
+x402 uses wallet-signed ERC-2612 permits and a router base URL.
+
+- Provider: `x402`
+- Auth: wallet private key (stored in auth profiles)
+- Example model: `x402/anthropic/opus-4.5`
+- CLI: `clawdbot onboard --auth-choice x402`
+
+```json5
+{
+  models: {
+    mode: "merge",
+    providers: {
+      x402: {
+        baseUrl: "https://router.example.com/v1",
+        api: "openai-completions",
+        authHeader: false,
+        models: [{ id: "anthropic/opus-4.5", name: "Anthropic Opus 4.5" }]
+      }
+    }
+  },
+  plugins: {
+    entries: {
+      "opencode-x402-auth": { config: { permitCap: 10, network: "eip155:8453" } }
+    }
+  }
+}
+```
+
 ### Moonshot AI (Kimi)
 
 Moonshot uses OpenAI-compatible endpoints, so configure it as a custom provider:

@@ -22,7 +22,8 @@ export type AuthChoiceGroupId =
   | "minimax"
   | "synthetic"
   | "venice"
-  | "qwen";
+  | "qwen"
+  | "x402";
 
 export type AuthChoiceGroup = {
   value: AuthChoiceGroupId;
@@ -114,6 +115,12 @@ const AUTH_CHOICE_GROUP_DEFS: {
     label: "OpenCode Zen",
     hint: "API key",
     choices: ["opencode-zen"],
+  },
+  {
+    value: "x402",
+    label: "x402",
+    hint: "Permit-signed router",
+    choices: ["x402"],
   },
 ];
 
@@ -220,6 +227,11 @@ export function buildAuthChoiceOptions(params: {
   });
   options.push({ value: "zai-api-key", label: "Z.AI (GLM 4.7) API key" });
   options.push({ value: "qwen-portal", label: "Qwen OAuth" });
+  options.push({
+    value: "x402",
+    label: "x402 (permit-signed)",
+    hint: "Wallet-signed ERC-2612 permits",
+  });
   options.push({
     value: "copilot-proxy",
     label: "Copilot Proxy (local)",

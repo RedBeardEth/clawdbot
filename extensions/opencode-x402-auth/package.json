@@ -1,0 +1,9 @@
+{
+  "name": "@clawdbot/opencode-x402-auth",
+  "version": "2026.1.25",
+  "type": "module",
+  "description": "Clawdbot x402 permit auth provider plugin",
+  "clawdbot": {
+    "extensions": ["./index.ts"]
+  }
+}
