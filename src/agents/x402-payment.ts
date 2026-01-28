@@ -1,11 +1,11 @@
 import type { StreamFn } from "@mariozechner/pi-agent-core";
-import type { ClawdbotConfig } from "../config/config.js";
+import type { MoltbotConfig } from "../config/config.js";
 import { createPublicClient, createWalletClient, http, type Account, type Chain } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { base, baseSepolia, mainnet } from "viem/chains";
 
 const X402_PROVIDER_ID = "x402";
-const X402_PLUGIN_ID = "opencode-x402-auth";
+const X402_PLUGIN_ID = "daydreams-x402-auth";
 const DEFAULT_ROUTER_ORIGIN = "http://localhost:8080";
 const DEFAULT_NETWORK = "eip155:8453";
 const DEFAULT_PERMIT_CAP_USD = 10;
@@ -129,7 +129,7 @@ function normalizeBaseUrl(value?: string): { baseUrl: string; routerUrl: string 
   return { baseUrl, routerUrl };
 }
 
-function resolvePluginConfig(cfg?: ClawdbotConfig): { permitCapUsd: number; network: string } {
+function resolvePluginConfig(cfg?: MoltbotConfig): { permitCapUsd: number; network: string } {
   const raw = cfg?.plugins?.entries?.[X402_PLUGIN_ID]?.config;
   const record = raw && typeof raw === "object" ? (raw as Record<string, unknown>) : {};
   const permitCapRaw = record.permitCap;
@@ -446,7 +446,7 @@ function wrapStreamFnWithFetch(streamFn: StreamFn, fetchImpl: typeof fetch): Str
 export function maybeWrapStreamFnWithX402Payment(params: {
   streamFn?: StreamFn;
   provider: string;
-  config?: ClawdbotConfig;
+  config?: MoltbotConfig;
   apiKey?: string;
 }): StreamFn | undefined {
   if (!params.streamFn) return params.streamFn;

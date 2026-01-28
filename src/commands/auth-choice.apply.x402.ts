@@ -6,7 +6,7 @@ export async function applyAuthChoiceX402(
 ): Promise<ApplyAuthChoiceResult | null> {
   return await applyAuthChoicePluginProvider(params, {
     authChoice: "x402",
-    pluginId: "opencode-x402-auth",
+    pluginId: "daydreams-x402-auth",
     providerId: "x402",
     methodId: "wallet",
     label: "Daydreams Router (x402)",

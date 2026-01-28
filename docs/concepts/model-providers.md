@@ -149,7 +149,7 @@ It lets you pay for inference with USDC.
   },
   plugins: {
     entries: {
-      "opencode-x402-auth": { config: { permitCap: 10, network: "eip155:8453" } }
+      "daydreams-x402-auth": { config: { permitCap: 10, network: "eip155:8453" } }
     }
   }
 }

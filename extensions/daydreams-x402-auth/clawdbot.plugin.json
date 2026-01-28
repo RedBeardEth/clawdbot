@@ -1,5 +1,5 @@
 {
-  "id": "opencode-x402-auth",
+  "id": "daydreams-x402-auth",
   "providers": ["x402"],
   "uiHints": {
     "permitCap": {
