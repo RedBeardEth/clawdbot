@@ -141,7 +141,7 @@ It lets you pay for inference with USDC.
     providers: {
       x402: {
         baseUrl: "https://ai.xgate.run/v1",
-        api: "openai-completions",
+        api: "anthropic-messages",
         authHeader: false,
         models: [{ id: "anthropic:claude-opus-4-5", name: "Claude Opus 4.5" }]
       }
