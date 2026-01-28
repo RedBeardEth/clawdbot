@@ -259,6 +259,16 @@ clawdbot onboard --non-interactive \
   --gateway-bind loopback
 ```
 
+Daydreams Router (x402) example (interactive):
+
+```bash
+clawdbot onboard \
+  --mode local \
+  --auth-choice x402 \
+  --gateway-port 18789 \
+  --gateway-bind loopback
+```
+
 Add agent (non‑interactive) example:
 
 ```bash

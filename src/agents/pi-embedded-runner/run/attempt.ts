@@ -57,6 +57,7 @@ import { isAbortError } from "../abort.js";
 import { buildEmbeddedExtensionPaths } from "../extensions.js";
 import { applyExtraParamsToAgent } from "../extra-params.js";
 import { appendCacheTtlTimestamp, isCacheTtlEligibleProvider } from "../cache-ttl.js";
+import { maybeWrapStreamFnWithX402Payment } from "../../x402-payment.js";
 import {
   logToolSchemasForGoogle,
   sanitizeSessionHistory,
@@ -509,6 +510,14 @@ export async function runEmbeddedAttempt(
           activeSession.agent.streamFn,
         );
       }
+
+      activeSession.agent.streamFn =
+        maybeWrapStreamFnWithX402Payment({
+          streamFn: activeSession.agent.streamFn,
+          provider: params.provider,
+          config: params.config,
+          apiKey: params.providerApiKey,
+        }) ?? activeSession.agent.streamFn;
 
       try {
         const prior = await sanitizeSessionHistory({

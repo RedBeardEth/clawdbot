@@ -6,7 +6,7 @@ Docs: https://docs.clawd.bot
 Status: unreleased.
 
 ### Changes
-- TBD.
+- Providers: add x402 permit-signed router provider + onboarding.
 
 ## 2026.1.24-3
 
