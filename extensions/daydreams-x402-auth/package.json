@@ -1,5 +1,5 @@
 {
-  "name": "@clawdbot/opencode-x402-auth",
+  "name": "@clawdbot/daydreams-x402-auth",
   "version": "2026.1.25",
   "type": "module",
   "description": "Clawdbot Daydreams Router (x402) auth provider plugin",

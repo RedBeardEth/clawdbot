@@ -2,9 +2,9 @@ import { emptyPluginConfigSchema } from "clawdbot/plugin-sdk";
 
 const PROVIDER_ID = "x402";
 const PROVIDER_LABEL = "Daydreams Router (x402)";
-const PLUGIN_ID = "opencode-x402-auth";
+const PLUGIN_ID = "daydreams-x402-auth";
 
-const DEFAULT_ROUTER_URL = "http://localhost:8080";
+const DEFAULT_ROUTER_URL = "https://ai.xgate.run/v1";
 const DEFAULT_NETWORK = "eip155:8453";
 const DEFAULT_PERMIT_CAP_USD = 10;
 const DEFAULT_MODEL_ID = "anthropic/opus-4.5";
@@ -167,7 +167,7 @@ const x402Plugin = {
               defaultModel: DEFAULT_AUTO_REF,
               notes: [
                 `Daydreams Router base URL set to ${routerUrl}.`,
-                "Permit caps apply per signed session; update plugins.entries.opencode-x402-auth.config to change.",
+                "Permit caps apply per signed session; update plugins.entries.daydreams-x402-auth.config to change.",
               ],
             };
           },
