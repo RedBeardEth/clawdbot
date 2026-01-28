@@ -6,7 +6,7 @@ import { base, baseSepolia, mainnet } from "viem/chains";
 
 const X402_PROVIDER_ID = "x402";
 const X402_PLUGIN_ID = "daydreams-x402-auth";
-const DEFAULT_ROUTER_ORIGIN = "http://localhost:8080";
+const DEFAULT_ROUTER_ORIGIN = "https://ai.xgate.run";
 const DEFAULT_NETWORK = "eip155:8453";
 const DEFAULT_PERMIT_CAP_USD = 10;
 const DEFAULT_VALIDITY_SECONDS = 60 * 60;

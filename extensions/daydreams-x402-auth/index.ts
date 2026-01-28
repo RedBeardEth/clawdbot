@@ -4,7 +4,7 @@ const PROVIDER_ID = "x402";
 const PROVIDER_LABEL = "Daydreams Router (x402)";
 const PLUGIN_ID = "daydreams-x402-auth";
 
-const DEFAULT_ROUTER_URL = "http://localhost:8080";
+const DEFAULT_ROUTER_URL = "https://ai.xgate.run/v1";
 const DEFAULT_NETWORK = "eip155:8453";
 const DEFAULT_PERMIT_CAP_USD = 10;
 const DEFAULT_MODEL_ID = "anthropic/opus-4.5";
